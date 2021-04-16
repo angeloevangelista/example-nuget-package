@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>angeloevangelista-example-nuget-package</PackageId>
+    <Version>1.1.0</Version>
+    <Authors>angeloevangelista</Authors>
   </PropertyGroup>
 
 </Project>

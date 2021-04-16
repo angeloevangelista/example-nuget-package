@@ -28,6 +28,26 @@ namespace Library.Tests
     }
 
     [TestMethod]
+    public void ShouldMultiplyCollectionOfPositiveValues()
+    {
+      decimal[] values = new decimal[] { 2, 3, 4, 5 };
+
+      var result = Calculator.Multiply(values);
+
+      Assert.IsTrue(result == 120);
+    }
+
+    [TestMethod]
+    public void ShouldSubtractCollectionOfPositiveValues()
+    {
+      decimal[] values = new decimal[] { 1, 2, 3, 4, 5 };
+
+      var result = Calculator.Subtract(values);
+
+      Assert.IsTrue(result == -13);
+    }
+
+    [TestMethod]
     public void ShouldSumCollectionOfNegativeValues()
     {
       decimal[] values = new decimal[] { -1, -2, -3, -4, -5 };

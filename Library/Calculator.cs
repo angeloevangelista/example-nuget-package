@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Library
 {
@@ -14,7 +15,25 @@ namespace Library
       return sum;
     }
 
-    public static decimal Subtract(decimal x, decimal y) => x - y;
+    public static decimal Subtract(params decimal[] values)
+    {
+      var result = values.FirstOrDefault() * 2;
+
+      foreach (var value in values)
+        result -= value;
+
+      return result;
+    }
+
+    public static decimal Multiply(params decimal[] values)
+    {
+      var result = 1m;
+
+      foreach (var value in values)
+        result *= value;
+
+      return result;
+    }
 
     public static int GetNextPrimeNumber(int baseNumber)
     {
